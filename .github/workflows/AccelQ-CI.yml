@@ -28,13 +28,13 @@
           uses: accelQ-Inc/accelq-ci-github-actions@v1.4
           with:
            # Your ACCELQ Application URL in the exact following format: https://<hostname>:<port_num>
-           appURL: https://training.accelq.io/
+           appURL: ${{ secrets.ACCELQ_URL }}
            # Your ACCELQ User ID
-           userName: pprathibha738@gmail.com
+           userName: ${{ secrets.ACCELQ_USER_ID }}
            # API key available in Profile section of ACCELQ
-           apiKey: _wz9GNuevNQ6Rh-t8vjQCzCQaOOMNo6V5acsaMKhztQ
+           apiKey: ${{ secrets.ACCELQ_API_KEY }}
            # Tenant Code displayed in the Profile section of ACCELQ
-           tenantCode: accelqtraining
+           tenantCode: ${{ secrets.ACCELQ_TENANT_CODE }}
            # This ID should come from the CI job you saved in ACCELQ application
            jobId: 107480
            # Run Params(optional) should be JSON string form example: '{"username": "John Todd", "password": "bxW&=UVw"}'
